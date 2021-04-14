@@ -32,21 +32,21 @@ export default {
   },
   methods: {
     async getList() {
-      const resData = await axios.get("https://pure-meadow-60471.herokuapp.com/api/todolist/");
+      const resData = await axios.get("https://pure-meadow-60471.herokuapp.com/api/todolist");
       this.todoList = resData.data.data;
     },
     async insertList() {
       const sendData = { list: this.list };
-      await axios.post("https://pure-meadow-60471.herokuapp.com/api/todolist/", sendData);
+      await axios.post("https://pure-meadow-60471.herokuapp.com/api/todolist", sendData);
       await this.getList();
     },
     async updateList(id, list) {
       const sendData = { list: list };
-      await axios.put("https://pure-meadow-60471.herokuapp.com/api/todolist/" + id, sendData);
+      await axios.put("https://pure-meadow-60471.herokuapp.com/api/todolist" + id, sendData);
       await this.getList();
     },
     async deleteList(id) {
-      await axios.delete("https://pure-meadow-60471.herokuapp.com/api/todolist/" + id);
+      await axios.delete("https://pure-meadow-60471.herokuapp.com/api/todolist" + id);
       await this.getList();
     }
   },
