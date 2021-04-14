@@ -267,7 +267,7 @@ justify-content: space-between;
 }
 
 table td input {
-  width: 50%;
+  width: 20vw;
 }
 
 </style>
