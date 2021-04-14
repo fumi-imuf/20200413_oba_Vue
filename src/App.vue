@@ -39,6 +39,7 @@ export default {
       const sendData = { list: this.list };
       await axios.post("https://pure-meadow-60471.herokuapp.com/api/todolist", sendData);
       await this.getList();
+      this.list = "";
     },
     async updateList(id, list) {
       const sendData = { list: list };
