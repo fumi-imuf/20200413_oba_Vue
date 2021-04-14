@@ -42,11 +42,11 @@ export default {
     },
     async updateList(id, list) {
       const sendData = { list: list };
-      await axios.put("https://pure-meadow-60471.herokuapp.com/api/todolist" + id, sendData);
+      await axios.put("https://pure-meadow-60471.herokuapp.com/api/todolist/" + id, sendData);
       await this.getList();
     },
     async deleteList(id) {
-      await axios.delete("https://pure-meadow-60471.herokuapp.com/api/todolist" + id);
+      await axios.delete("https://pure-meadow-60471.herokuapp.com/api/todolist/" + id);
       await this.getList();
     }
   },
